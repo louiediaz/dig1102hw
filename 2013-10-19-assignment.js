@@ -14,3 +14,18 @@ function updateDataTime(me) {
 =======
 }
 >>>>>>> e5074206c4a02ca09431991f2cb883fd71fb2eac
+
+//
+
+
+function pushPreSectionPass(xloc, yloc, width, height, secnum) {
+  var passer = pushPreThing(Collider, xloc, yloc, [width, height], [sectionPass, sectionColliderInit]).object,
+      secnum = map.area.sections.current || 0,
+      section = map.area.sections[secnum];
+  
+  if(section.numpass) ++section.numpass;
+  else section.numpass = 1;
+  
+  if(!section.colliders) section.colliders = [passer];
+  else section.colliders.push(passer);
+}
