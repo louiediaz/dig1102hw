@@ -1,0 +1,36 @@
+<html>
+<title>onMouseover,onMouseout</title>
+
+<head>
+
+<script language="JavaScript">
+<!--
+// PRELOADING IMAGES
+if (document.images) {
+ img_on =new Image(); img_on.src ="../hi-icons/1.gif";
+ img_off=new Image(); img_off.src="../hi-icons/2.gif";
+}
+
+function handleOver() {
+ if (document.images) document.imgName.src=img_on.src;
+}
+
+function handleOut() {
+ if (document.images) document.imgName.src=img_off.src;
+}
+
+//-->
+</script>
+
+</head>
+
+<body>
+<a href="#any_URL"
+onMouseOver="handleOver();return true;"
+onMouseOut="handleOut();return true;"
+><img name=imgName width=17 height=15 border=0
+alt="This image changes when you point at it!" src="../hi-icons/2.gif"></a>
+
+</body>
+
+</html>
